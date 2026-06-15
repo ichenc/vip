@@ -41,7 +41,9 @@
 									href="https://cdn.jsdelivr.net/gh/88lin/video_vip@main/video_vip.user.js">Web</a>
 							</li>
 							<li class="header-links-item"><a href="./assets/jx.html">一键解析</a></li>
-							<li class="header-links-item"><a href="https://www.tampermonkey.net/crx/tampermonkey_stable.crx">Tampermonkey</a></li>
+							<li class="header-links-item"><a
+									href="https://www.tampermonkey.net/crx/tampermonkey_stable.crx">Tampermonkey</a>
+							</li>
 							<li class="header-links-item"><a href="/">使用教程</a></li>
 							<li class="header-links-item"><a href="https://ichenc.github.io/v">永久发布页</a></li>
 							<li class="header-links-item"><a href="https://ichenc.github.io">更多</a></li>
@@ -147,20 +149,11 @@
 					<!--设备判断-->
 					<script type="text/javascript">
 						function browserRedirect() {
-							var sUserAgent = navigator.userAgent.toLowerCase();
-							var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-							var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-							var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-							var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-							var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-							var bIsAndroid = sUserAgent.match(/android/i) == "android";
-							var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-							var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-							var iurl = window.location.href;
-							var surl = iurl.substring(iurl.lastIndexOf('/'));
-							if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+							const ua = navigator.userAgent.toLowerCase();
+							const isMobile = /ipad|iphone os|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(ua);
+							if (isMobile) {
 								window.location.href = 'https://ichenc.github.io/vip/Phone';
-							} else {}
+							}
 						}
 						browserRedirect();
 					</script>
