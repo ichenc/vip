@@ -72,42 +72,6 @@ vip/
 2. 点击首页导航「Web」安装脚本
 3. 打开任意视频网站，脚本会自动生效
 
-## 快速部署
-
-### Fork 部署
-
-1. Fork 本仓库到你的 GitHub 账号
-2. 仓库 Settings → Pages → Source 选择 `main` 分支
-3. 访问 `https://你的用户名.github.io/vip/` 即可
-
-### 绑定自定义域名
-
-1. 编辑 `CNAME` 文件，填入你的域名（如 `vip.example.com`）
-2. 在域名 DNS 服务商添加 CNAME 记录：
-   - 记录类型：`CNAME`
-   - 主机记录：`vip`
-   - 记录值：`你的用户名.github.io.`
-3. 等待 DNS 生效
-
-## 自定义修改
-
-### 修改解析接口
-
-编辑 `assets/jx.html`，找到 `jx.playerjy.com`，替换成你自己的解析接口地址。
-
-### 修改联系信息
-
-编辑 `index.html`，替换以下内容：
-- QQ 联系：搜索 `uin=80611129`，改成你的 QQ 号
-- 邮箱：搜索 `ichenc@163.com`，改成你的邮箱
-
-### 修改背景视频
-
-替换 `assets/video/dq.mp4` 文件即可。
-
-### 修改导航链接
-
-编辑 `index.html` 中 `<header>` 里的 `<ul class="header-links">`，增删导航项。
 
 ## 相关链接
 
